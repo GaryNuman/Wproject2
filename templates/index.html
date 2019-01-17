@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+        <script src="{{ url_for('static', filename='index.js') }}"></script>
+
+    <title>Flack</title>
+    </head>
+    
+    <body>
+        <!-- greet visitor -->
+        <h1> Welcome to Flack <div id="disname" style="display:inline-block;" ></div> </h1>
+        
+        <!-- first time visit / logged out display name (not in local storage) -->
+        <form id="new-name" style="display:none">
+            <br>
+            What will be your display name?
+            <input id="name" autocomplete="off" autofocus placeholder="Name" type="text">
+            <input type="submit" id="submit">
+        </form>
+
+        <div id=channels> 
+        <h2> Channels </h2>
+        <!-- empty unordered list in which the different channels will be added -->
+        <ul id="channels-list">
+        </ul>
+        <!-- add new channels to the list -->
+        <hr>
+            <input id="channel" autocomplete="off" autofocus placeholder="Channel name" type="text">
+            <button id="create">Create Channel</button>
+        </div> 
+    </body>
+
+</html>
+
